@@ -1,0 +1,29 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Albums!</title>
+</head>
+<body>
+    <h1>Add Album Form</h1>
+    <form th:action="@{/albums}" th:object="${newAlbum}" method="post">
+        <p>Album Title: <input type="text" th:field="*{title}" /></p>
+        <p>Artist: <input type="text" th:field="*{artist}" /></p>
+        <p># of Songs: <input type="number" th:field="*{songCount}"></p>
+        <p>Total Runtime in seconds: <input type="number" th:field="*{length}"></p>
+        <p>Image Url: <input type="text" th:field="*{imageUrl}"></p>
+
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+
+
+    <h1>Albums</h1>
+    <ul>
+        <li th:each="album : ${albums}">
+            <img th:src="${album.imageUrl}" height="300" width="300"/>
+            <span th:text="${album.title}"></span>
+            by <span th:text="${album.artist}"></span>
+            with <span th:text="${album.songCount}"></span> songs and a
+            total runtime of <span th:text="${album.length}"></span> seconds.
+        </li>
+    </ul>
+</body>
+</html>

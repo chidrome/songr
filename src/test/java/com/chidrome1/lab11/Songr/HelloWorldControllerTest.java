@@ -1,5 +1,6 @@
 package com.chidrome1.lab11.Songr;
 
+import com.chidrome1.lab11.Songr.Controllers.HelloWorldController;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
