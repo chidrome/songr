@@ -4,7 +4,8 @@ This repo holds a "RESTful" spring server with multiple get routes.
 ## Architecture
 
 #### Main Files
-  * [HelloWorldController.java](./src/main/java/com/chidrome1/lab11/Songr/HelloWorldController.java)
+  * [HelloWorldController.java](./src/main/java/com/chidrome1/lab11/Songr/Controllers/HelloWorldController.java)
+  * [ShowAlbumController.java](./src/main/java/com/chidrome1/lab11/Songr/Controllers/ShowAlbumController.java)
   
 #### Test Files
   * [HelloWorldControllerTest.java](./src/test/java/com/chidrome1/lab11/Songr/HelloWorldControllerTest.java)
@@ -20,3 +21,5 @@ This repo holds a "RESTful" spring server with multiple get routes.
   * Ex. `/capitalize/{hello world}`       output: `HELLO WORLD`
 * `/reverse?sentence=Your sentence here`: will return the sentence you you inputted in reverse
   * Ex. `/reverse?sentence=Hello world` output: `world Hello`
+* `/albums`: will display all albums in database
+  * includes POST route to add new albums to the database and redirects to `/albums` to display

@@ -1,4 +1,4 @@
-package com.chidrome1.lab11.Songr;
+package com.chidrome1.lab11.Songr.Controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -40,5 +40,7 @@ public class HelloWorldController {
 
         return reverse.toString().trim();
     }
+
+
 
 }
