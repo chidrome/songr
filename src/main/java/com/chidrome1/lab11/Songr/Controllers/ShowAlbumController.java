@@ -1,6 +1,6 @@
 package com.chidrome1.lab11.Songr.Controllers;
 
-import com.chidrome1.lab11.Songr.AlbumRepository;
+import com.chidrome1.lab11.Songr.Repositories.AlbumRepository;
 import com.chidrome1.lab11.Songr.Models.Album;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

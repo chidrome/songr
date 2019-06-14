@@ -6,6 +6,7 @@ This repo holds a "RESTful" spring server with multiple get routes.
 #### Main Files
   * [HelloWorldController.java](./src/main/java/com/chidrome1/lab11/Songr/Controllers/HelloWorldController.java)
   * [ShowAlbumController.java](./src/main/java/com/chidrome1/lab11/Songr/Controllers/ShowAlbumController.java)
+  * [ShowSongsController.java](./src/main/java/com/chidrome1/lab11/Songr/Controllers/ShowSongsController.java)
   
 #### Test Files
   * [HelloWorldControllerTest.java](./src/test/java/com/chidrome1/lab11/Songr/HelloWorldControllerTest.java)
@@ -23,3 +24,5 @@ This repo holds a "RESTful" spring server with multiple get routes.
   * Ex. `/reverse?sentence=Hello world` output: `world Hello`
 * `/albums`: will display all albums in database
   * includes POST route to add new albums to the database and redirects to `/albums` to display
+* `/albums/{id}` will display all the songs in a specific album
+  * includes POST route to add new songs to the database and redirects to `/albums{id}` to display all the songs. Including the recent song added.
