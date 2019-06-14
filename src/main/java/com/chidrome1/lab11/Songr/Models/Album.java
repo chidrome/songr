@@ -1,10 +1,8 @@
 package com.chidrome1.lab11.Songr.Models;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 // title
 // artist
@@ -16,9 +14,14 @@ import javax.persistence.Id;
 @Entity
 public class Album {
 
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
+
+    @OneToMany(mappedBy = "album")
+    List<Song> songs;
 
     String title;
     String artist;
@@ -36,24 +39,32 @@ public class Album {
     }
 
     // getters
+    public long getId() {
+        return id;
+    }
+
     public String getTitle() {
-        return this.title;
+        return title;
     }
 
     public String getArtist() {
-        return this.artist;
+        return artist;
     }
 
     public short getSongCount() {
-        return this.songCount;
+        return songCount;
     }
 
     public long getLength() {
-        return this.length;
+        return length;
     }
 
     public String getImageUrl() {
-        return this.imageUrl;
+        return imageUrl;
+    }
+
+    public List<Song> getSongs(){
+        return songs;
     }
 
     // setters

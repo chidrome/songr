@@ -11,7 +11,7 @@ public class HelloWorldController {
     // specify the route for this method
     @GetMapping("/")
     public String getHomeRoute() {
-        return "Home Stub Route";
+        return "Hello, world! It's a beautiful day!";
     }
 
     // hello route
